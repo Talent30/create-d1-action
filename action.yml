@@ -1,24 +1,19 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
-
-# Define your inputs here.
+name: "Create or Get D1 Database"
+description: "A GitHub Action to create or retrieve a Cloudflare D1 database by name."
+author: "Jon Sun"
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  db_name:
+    description: "The name of the D1 database to create or get"
     required: true
-    default: '1000'
-
-# Define your outputs here.
+  account_id:
+    description: "Cloudflare account ID"
+    required: true
+  api_token:
+    description: "Cloudflare API token with permissions to manage D1 databases"
+    required: true
 outputs:
-  time:
-    description: 'Your output description here'
-
+  database_id:
+    description: "The ID of the D1 database"
 runs:
-  using: node20
-  main: dist/index.js
+  using: "node20"
+  main: "dist/index.js"
