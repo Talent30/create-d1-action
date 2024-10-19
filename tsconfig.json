@@ -13,8 +13,7 @@
     /* EMIT RULES */
     "outDir": "./dist",
     "noEmit": true,
-    "declaration": true,
-    "declarationMap": true,
+    "declaration": false,
     "sourceMap": true,
     "removeComments": true,
     /* TYPE CHECKING RULES */
@@ -45,8 +44,7 @@
     "skipLibCheck": true,
     "useDefineForClassFields": true,
     "verbatimModuleSyntax": true,
-    "incremental": true,
-    "composite": true
+    "incremental": true
   },
   "exclude": ["./dist", "./node_modules", "./__tests__", "./coverage"],
   "include": ["**/*.ts"]
