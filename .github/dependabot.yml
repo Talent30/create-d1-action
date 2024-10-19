@@ -10,7 +10,7 @@ updates:
           - minor
           - patch
 
-  - package-ecosystem: pnpm
+  - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly

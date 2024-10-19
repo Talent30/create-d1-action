@@ -3,6 +3,7 @@
   "description": "GitHub Action to create or get a Cloudflare D1 Database",
   "version": "0.0.0",
   "author": "Jon Sun",
+  "type": "module",
   "homepage": "https://github.com/actions/typescript-action",
   "repository": {
     "type": "git",
@@ -20,30 +21,30 @@
     ".": "./dist/index.js"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   },
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "npx eslint . -c ./.github/linters/.eslintrc.yml",
-    "package": "npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
-    "package:watch": "npm run package -- --watch",
-    "test": "npx jest",
-    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
+    "bundle": "pnpm run format:write && pnpm run package",
+    "format:write": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "package": "ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package:watch": "pnpm run package -- --watch",
+    "all": "pnpm run format:write && pnpm run lint && pnpm run test && pnpm run coverage && pnpm run package"
   },
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.1"
+    "@actions/core": "^1.11.1",
+    "ky": "^1.7.2"
   },
   "devDependencies": {
-    "@types/node": "^22.5.5",
-    "@typescript-eslint/eslint-plugin": "^8.6.0",
-    "@typescript-eslint/parser": "^8.6.0",
-    "@vercel/ncc": "^0.38.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-jsonc": "^2.16.0",
+    "@types/node": "^22.7.6",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
+    "@vercel/ncc": "^0.38.2",
+    "eslint": "^9.13.0",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3",
+    "typescript-eslint": "8.10.0"
   }
 }

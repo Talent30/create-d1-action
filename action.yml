@@ -1,19 +1,19 @@
-name: 'Create or Get D1 Database'
-description: 'A GitHub Action to create or retrieve a Cloudflare D1 database by name.'
-author: 'Jon Sun'
+name: "Create or Get D1 Database"
+description: "A GitHub Action to create or retrieve a Cloudflare D1 database by name."
+author: "Jon Sun"
 inputs:
   db_name:
-    description: 'The name of the D1 database to create or get'
+    description: "The name of the D1 database to create or get"
     required: true
   account_id:
-    description: 'Cloudflare account ID'
+    description: "Cloudflare account ID"
     required: true
   api_token:
-    description: 'Cloudflare API token with permissions to manage D1 databases'
+    description: "Cloudflare API token with permissions to manage D1 databases"
     required: true
 outputs:
   database_id:
-    description: 'The ID of the D1 database'
+    description: "The ID of the D1 database"
 runs:
-  using: 'node22'
-  main: 'dist/index.js'
+  using: "node20"
+  main: "dist/index.js"
