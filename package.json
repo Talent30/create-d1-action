@@ -39,7 +39,7 @@
     "ky": "^1.7.2"
   },
   "devDependencies": {
-    "@types/node": "^22.7.6",
+    "@types/node": "^22.9.0",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.10.0",
     "@vercel/ncc": "^0.38.2",
